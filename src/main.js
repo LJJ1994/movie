@@ -13,6 +13,7 @@ import VueResource from 'vue-resource'
 import '@/assets/css/common.css'
 import 'swiper/dist/css/swiper.min.css'
 import 'mint-ui/lib/style.css'
+import './assets/styles/iconfont.css'
 
 Vue.use(Mint)
 Vue.use(new Swiper)

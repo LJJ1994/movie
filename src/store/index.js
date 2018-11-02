@@ -40,14 +40,14 @@ const city = {
 }
 
 const videoGetters = {
-	showMask: state => state.platStatus
+	showMask: state => state.playStatus
 }
 
 const video = {
 	state: {
 		url: '',
 		cover: '',
-		platStatus: false
+		playStatus: false
 	},
 	mutations: videoMutations,
 	getters: videoGetters
