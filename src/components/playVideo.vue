@@ -2,9 +2,12 @@
 	<section class="video-mask mask" v-show="showMask" @click="cancelMask">
 		<div class="video-box pa">
 			<div class="v-cover">
-				<video ref="video" :src="$store.state.video.url" :poster="$store.state.video.cover" class="v-content"></video>
+				<video ref="video" :src="$store.state.video.url" :poster="$store.state.video.cover" class="v-content"></video> <!-- 这里绑定poster为背景图片 -->
 			</div>
-			<div class="v-icon pa iconfont" @click="videoStart" v-if="showIcon">&#xe6ea;</div>
+			<!-- <div class="v-icon pa iconfont" @click="videoStart" v-if="showIcon">&#xe6ea;</div> -->
+			<div class="v-icon pa iconfont" @click="videoStart" v-if="showIcon">
+				<icon name="play_1" scale="10"></icon>
+			</div>
 		</div>
 	</section>
 </template>
@@ -67,10 +70,10 @@ export default{
 		height: 100%;
 	}
 	.iconfont {
-		width: 39px;
-    height: 46px;
-    left: 58%;
-    top: 67%;
+    width: 101px;
+    height: 110px;
+    left: 48%;
+    top: 46%;
     margin-left: -40px;
     margin-top: -45px;
 /*		background: url('~@/assets/images/play.png') -2px -2px no-repeat;*/
