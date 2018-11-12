@@ -10,7 +10,7 @@
             <span class="k-mode vm" v-show="item.showMark === '巨幕厅'">巨幕厅</span>
           </div>
           <p class="cm-address tddd">{{ item.address}}</p>
-          <div class="cm-welfare">
+          <div class="cmD-welfare">
             <span class="label-mod label-border-blue">座</span>
             <span class="label-mod label-orange">新人专享</span>
             <span class="label-mod">18.8元起</span>
@@ -56,7 +56,7 @@ export default {
 }
 
 .cm-address,
-.cm-welfare {
+.cmD-welfare {
   color: gray;
   font-size: 10px;
   margin-top: 10px;

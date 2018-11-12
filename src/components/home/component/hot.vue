@@ -13,20 +13,22 @@
             <button class="buy-btn f12" v-if="item.openTime < '2016-12-09'">购买</button>
             <button class="forward-buy-btn f12" v-else>预售</button>
           </div>
-          <div class="m-info">
-            <div class="m-name">
-              <h2 class="f16 tddd vm fl">{{ item.showName }}</h2>
-              <div class="vm type-3dimax" v-if="item.showMark == 'IMAX3D'"></div>
-              <div class="vm type-imax" v-if="item.showMark == 'IMAX'"></div>
-              <div class="vm type-3d" v-if="item.showMark == '3D'"></div>
+          <router-link :to="{name: 'mDetail', params: {id:item.mId}}">
+            <div class="m-info">
+              <div class="m-name">
+                <h2 class="f16 tddd vm fl">{{ item.showName }}</h2>
+                <div class="vm type-3dimax" v-if="item.showMark == 'IMAX3D'"></div>
+                <div class="vm type-imax" v-if="item.showMark == 'IMAX'"></div>
+                <div class="vm type-3d" v-if="item.showMark == '3D'"></div>
+              </div>
+              <div class="full-star pr">
+                <div class="score-start" :style="{width: `${item.remark * 10}%`}"></div>
+                <span class="score pa">{{ item.remark }}</span>
+              </div>
+              <p>{{ item.highlight }}</p>
+              <p>{{ item.leadingRole}}</p>
             </div>
-            <div class="full-star pr">
-              <div class="score-start" :style="{width: `${item.remark * 10}%`}"></div>
-              <span class="score pa">{{ item.remark }}</span>
-            </div>
-            <p>{{ item.highlight }}</p>
-            <p>{{ item.leadingRole}}</p>
-          </div>
+          </router-link>
         </div>
         <div class="f13 m-act">
           <span class="border-right">1212五折狂欢</span>

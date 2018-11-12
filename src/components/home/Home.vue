@@ -1,8 +1,9 @@
 <template>
   <section style="height: 100%">
     <city></city>
-    <header class="home-header border-bottom">
+    <header class="home-header border-bottom" :class="{isFixed: Fixed}">
       <div class="city fl" @click="showCityList">
+        <span class="city-icon"></span>
         <span class="city-name vm f14">{{ $store.state.city.name}}</span>
         <span class="city-arrow-icon vm"></span>
       </div>
@@ -44,6 +45,7 @@ export default {
   name: 'Home',
   data() {
     return {
+      Fixed: false,
       selnav: true,
       moveDistance: '6%',
       homeImgs: [],
@@ -74,6 +76,14 @@ export default {
       'showCityList',
       'pushComingList'
     ]),
+    handleScroll() {
+      let top = document.documentElement.scrollTop
+      if (top > 40) {
+        this.Fixed = true
+      } else if (top < 40) {
+        this.Fixed = false
+      }
+    },
     moveTab(event) {
       event.target.getAttribute('hot') ? this.selectHotTab() : this.selectComingTab()
     },
@@ -146,7 +156,7 @@ export default {
     }
   },
 
-  mounted() {
+  created() {
     this.pushComingList({ lists: [] })
     this.requestData('/api/swiper.json', (response) => {
       let data = response.data.data
@@ -166,6 +176,7 @@ export default {
       this.comingLists = this.sortComingLists(lists)
       this.offset = this.offset + this.limit
     })
+    window.addEventListener('scroll', this.handleScroll)
   }
 }
 
@@ -177,6 +188,17 @@ export default {
   background-color: #fff;
 }
 
+/*.isFixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 40px;
+  width: 100%;
+  background: #fff;
+  transition: all .5 ease-in-out;
+}*/
+
 .selnav {
   color: #ff4d64;
 }
@@ -187,6 +209,21 @@ export default {
   line-height: 40px;
   text-align: center;
   display: inline-block;
+}
+
+.city-icon {
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  left: 18px;
+  height: 25px;
+  width: 21px;
+  background-image: url('~@/assets/images/fav.svg');
+  background-color: white;
+  background-size: 8.7vw;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-position-x: -1.9vw;
 }
 
 .city-arrow-icon {

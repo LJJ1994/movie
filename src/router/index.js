@@ -6,6 +6,7 @@ import Me from '@/components/me/Me'
 import NoData from '@/components/NoData'
 import store from '@/store'
 import CinemaDetail from '@/components/cinemaDetail/CinemaDetail'
+import MovieDetail from '@/components/MovieDetail/MovieDetail'
 Vue.use(Router)
 Vue.use(store)
 
@@ -13,6 +14,11 @@ const routes = [{
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/home/mDetail/:id',
+    name: 'mDetail',
+    component: MovieDetail
   },
   {
     path: '/cinema',

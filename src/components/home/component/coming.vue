@@ -15,15 +15,17 @@
               <button class="forward-buy-btn f12">预售</button>
             </div>
             <div class="m-info">
-              <div class="m-name">
-                <h2 class="f16 tddd vm fl">{{ item.showName }}</h2>
-                <div class="vm type-3dimax" v-if="item.showMark == 'IMAX3D'"></div>
-                <div class="vm type-imax" v-if="item.showMark == 'IMAX'"></div>
-                <div class="vm type-3d" v-if="item.showMark == '3D'"></div>
-              </div>
-              <p class="count">{{ item.wantCount }}人想看</p>
-              <p>导演：{{ item.director }}</p>
-              <p>主演：{{ item.leadingRole }}</p>
+              <router-link :to="{name: 'mDetail',params: {id: item.mId}}">
+                <div class="m-name">
+                  <h2 class="f16 tddd vm fl">{{ item.showName }}</h2>
+                  <div class="vm type-3dimax" v-if="item.showMark == 'IMAX3D'"></div>
+                  <div class="vm type-imax" v-if="item.showMark == 'IMAX'"></div>
+                  <div class="vm type-3d" v-if="item.showMark == '3D'"></div>
+                </div>
+                <p class="count">{{ item.wantCount }}人想看</p>
+                <p>导演：{{ item.director }}</p>
+                <p>主演：{{ item.leadingRole }}</p>
+              </router-link>
             </div>
           </div>
         </li>
