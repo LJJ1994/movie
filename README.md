@@ -1,4 +1,4 @@
-# xbox
+# movie app
 
 > A Vue.js project
 
