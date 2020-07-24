@@ -1,1 +1,80 @@
-<mxfile host="app.diagrams.net" modified="2020-07-24T22:30:53.850Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36" version="13.5.3" etag="92JdvDubsBTI0zelw3H0" type="github"><diagram id="M0qBca7IaQR2uzBWeGTY">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-07-24T22:53:37.584Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36" etag="qcZXprON2IscyIQdY_Qk" version="13.5.3" type="github">
+  <diagram id="M0qBca7IaQR2uzBWeGTY" name="Page-1">
+    <mxGraphModel dx="1719" dy="450" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="gGuRi4oCIsVvxZncDhQT-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="gGuRi4oCIsVvxZncDhQT-1" target="gGuRi4oCIsVvxZncDhQT-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gGuRi4oCIsVvxZncDhQT-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="gGuRi4oCIsVvxZncDhQT-1" target="gGuRi4oCIsVvxZncDhQT-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gGuRi4oCIsVvxZncDhQT-1" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="-15" y="130" width="30" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="gGuRi4oCIsVvxZncDhQT-2" value="个人浏览器&lt;br&gt;(安装了shadowsocks客户端)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="100" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="gGuRi4oCIsVvxZncDhQT-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="gGuRi4oCIsVvxZncDhQT-3" target="gGuRi4oCIsVvxZncDhQT-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gGuRi4oCIsVvxZncDhQT-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.7;entryDx=0;entryDy=0;" edge="1" parent="1" source="gGuRi4oCIsVvxZncDhQT-3" target="gGuRi4oCIsVvxZncDhQT-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gGuRi4oCIsVvxZncDhQT-3" value="代理服务器(暂时没被墙封禁掉，所以用户能正常访问)&lt;br&gt;安装了shadowsocks" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="310" y="130" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="gGuRi4oCIsVvxZncDhQT-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="gGuRi4oCIsVvxZncDhQT-4" target="gGuRi4oCIsVvxZncDhQT-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gGuRi4oCIsVvxZncDhQT-4" value="Google服务器（彻底被墙封禁，大陆无法访问）" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="670" y="130" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="gGuRi4oCIsVvxZncDhQT-9" value="代理该请求，并且去请求Google" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="455" y="140" width="190" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="gGuRi4oCIsVvxZncDhQT-13" value="Google服务器返回数据" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="240" width="140" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="gGuRi4oCIsVvxZncDhQT-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.421;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="gGuRi4oCIsVvxZncDhQT-14" target="gGuRi4oCIsVvxZncDhQT-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gGuRi4oCIsVvxZncDhQT-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.7;exitDx=0;exitDy=0;entryX=0.633;entryY=0.644;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="gGuRi4oCIsVvxZncDhQT-14" target="gGuRi4oCIsVvxZncDhQT-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gGuRi4oCIsVvxZncDhQT-14" value="邪恶的GFW,&lt;br&gt;墙" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="90" width="60" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="gGuRi4oCIsVvxZncDhQT-16" value="用户请求Google" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="170" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="gGuRi4oCIsVvxZncDhQT-23" value="用户收到Google数据" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="225" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="gGuRi4oCIsVvxZncDhQT-24" value="&lt;font style=&quot;font-size: 18px&quot;&gt;代理的一个简单流程图&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="30" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="gGuRi4oCIsVvxZncDhQT-27" value="被墙封禁掉的代理服务器，&lt;br&gt;用户是无法连接的，也就没法翻墙访问到外网的信息" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="310" y="310" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="gGuRi4oCIsVvxZncDhQT-28" value="" style="curved=1;endArrow=classic;html=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="280" as="sourcePoint" />
+            <mxPoint x="410" y="230" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="410" y="280" />
+              <mxPoint x="360" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gGuRi4oCIsVvxZncDhQT-30" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.x;fillColor=#a20025;strokeColor=#6F0000;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="90" y="260" width="20" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="gGuRi4oCIsVvxZncDhQT-31" value="无法通过墙连接代理" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="290" width="120" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
